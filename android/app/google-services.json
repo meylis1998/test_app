@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "66993928120",
+    "project_id": "testapp-cd47a",
+    "storage_bucket": "testapp-cd47a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66993928120:android:b18a1d4aa4878cb124414d",
+        "android_client_info": {
+          "package_name": "com.firebaseTest.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyZFsgwiR4MS70mHehQYPlE6EBk9oan-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
