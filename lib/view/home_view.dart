@@ -36,7 +36,7 @@ class HomeView extends StatelessWidget {
                     ),
               ),
             );
-          } else {
+          } else if (state is FcmTokenError) {
             return Center(
               child: ElevatedButton.icon(
                 onPressed: () {
@@ -46,6 +46,8 @@ class HomeView extends StatelessWidget {
                 icon: const Icon(Icons.refresh),
               ),
             );
+          } else {
+            return const Text('Error');
           }
         },
       ),

@@ -8,3 +8,5 @@ class FcmTokenLoaded extends AppState {
   final String token;
   FcmTokenLoaded(this.token);
 }
+
+class FcmTokenError extends AppState {}

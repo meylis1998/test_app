@@ -1,4 +1,3 @@
-// app_bloc.dart
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 part 'app_event.dart';
@@ -12,7 +11,12 @@ class AppBloc extends Bloc<AppEvent, AppState> {
   }
 
   void _fetchFcmToken(FetchFcmToken event, Emitter<AppState> emit) async {
-    final token = await _firebaseMessaging.getToken();
-    emit(FcmTokenLoaded(token ?? ''));
+    emit(InitialState());
+    try {
+      final token = await _firebaseMessaging.getToken();
+      emit(FcmTokenLoaded(token ?? ''));
+    } catch (e) {
+      emit(FcmTokenError());
+    }
   }
 }
