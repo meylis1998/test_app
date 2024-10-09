@@ -15,6 +15,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
     try {
       final token = await _firebaseMessaging.getToken();
       emit(FcmTokenLoaded(token ?? ''));
+      print(token);
     } catch (e) {
       emit(FcmTokenError());
     }
